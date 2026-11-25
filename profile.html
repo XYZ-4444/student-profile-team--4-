@@ -1,1 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A student introduction and profile.">
+  <title>Student Profile</title>
+  <style>
+    :root { color-scheme: light; --ink: #17243b; --muted: #53627a; --paper: #f4f7fb; --card: #fff; --accent: #315ee8; --line: #dce4f0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: var(--accent); }
+    .skip { position: absolute; left: -9999px; top: 0; }
+    .skip:focus { left: 1rem; top: 1rem; z-index: 2; background: white; padding: .6rem; }
+    header { background: #17243b; color: white; padding: 1.25rem max(1.25rem, calc((100% - 900px)/2)); }
+    header nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    header a { color: white; text-decoration: none; font-weight: 650; }
+    main { max-width: 900px; margin: 3rem auto; padding: 0 1.25rem; }
+    .hero, .panel { background: var(--card); border: 1px solid var(--line); border-radius: 1.2rem; padding: clamp(1.4rem, 4vw, 2.5rem); box-shadow: 0 14px 40px #243b6410; }
+    .hero { display: grid; grid-template-columns: 112px 1fr; gap: 1.5rem; align-items: center; }
+    .avatar { width: 112px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: #e6edff; color: #244bc0; font-size: 2rem; font-weight: 750; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 750; margin: 0 0 .4rem; }
+    h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 .65rem; }
+    h2 { margin-top: 0; }
+    .muted { color: var(--muted); }
+    .panel { margin-top: 1.25rem; }
+    footer { max-width: 900px; margin: 0 auto; padding: 0 1.25rem 2rem; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 560px) { .hero { grid-template-columns: 1fr; } .avatar { width: 84px; font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="profile.html" aria-current="page">Profile</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="name">
+      <div class="avatar" aria-hidden="true">YN</div>
+      <div>
+        <p class="eyebrow">Student profile</p>
+        <h1 id="name">[Your name]</h1>
+        <p class="muted">[Class or learning group] · [A favorite subject or interest]</p>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="about-title">
+      <h2 id="about-title">A little about me</h2>
+      <p>[Write a few sentences introducing yourself. Share a hobby, a subject you enjoy, and something you hope to learn. Only include details you are comfortable sharing publicly.]</p>
+    </section>
+    <section class="panel" aria-labelledby="goal-title">
+      <h2 id="goal-title">What I am learning</h2>
+      <p>[Describe one project or skill you are working on and what you would like to try next.]</p>
+    </section>
+  </main>
+  <footer><p>Made for our Web Development Lab team project.</p></footer>
+</body>
+</html>
 
